@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.name }} | {{ store.name }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{{ theme | theme_css_url }}" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://codegreer.com/paintmonkey/pm-style.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+      .left-panel {min-height: 70vh;}
+    </style>
+    {{ head_content }}
+  </head>
+  <body id="{{ page.permalink }}" class="{{ page.category }}">
+    <div class="menu-bar">
+      <div class="menu-item open-cart">
+        <a class="open-cart-link" href="/cart">
+          <span class="cart-title">Cart</span>
+          <span class="cart-icon">
+            <svg {% if cart.item_count > 0 %} style="display:none;"{% endif %} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 13"><g fill-rule="evenodd"><path d="M.474 0L0 1.423l2.644.88 2.053 6.16h8.048l2.6-6.502H6.5v1.5h6.63l-1.4 3.502H5.777L3.83 1.12M12.987 11.21c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25M6.987 11.21c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25"/></g></svg>
+            <span class="cart-num-items"{% if cart.item_count == 0 %} style="display:none;"{% endif %}>{{ cart.item_count }}</span>
+          </span>
+        </a>
+      </div>
+      <div class="menu-item toggle-overlay">
+        <a class="open-navigation" href="#">
+          Menu
+        </a>
+      </div>
+      <div class="menu-item social-links">
+        {% if theme.twitter_url != blank or theme.facebook_url != blank or theme.instagram_url != blank or theme.tumblr_url != blank or theme.pinterest_url != blank %}
+          {% if theme.instagram_url != blank %}
+            <a class="social-link" target="_blank" title="Instagram" href="{{ theme.instagram_url }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M23.9 7.1c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0S8.3 0 7.1.1C2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9zM12 18.2c-3.4 0-6.2-2.8-6.2-6.2S8.6 5.8 12 5.8s6.2 2.8 6.2 6.2c0 3.4-2.8 6.2-6.2 6.2zM18.4 7c-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4 0 .8-.6 1.4-1.4 1.4z"/></svg></a>
+          {% endif %}
+          {% if theme.twitter_url != blank %}
+            <a class="social-link" target="_blank" title="Twitter" href="{{ theme.twitter_url }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.61 1.798-1.574 2.165-2.724-.95.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.18 0-5.515 2.966-4.797 6.045C7.727 8.088 4.1 6.128 1.67 3.15.38 5.36 1.003 8.256 3.195 9.722c-.806-.026-1.566-.247-2.23-.616-.053 2.28 1.582 4.415 3.95 4.89-.693.188-1.452.232-2.224.084.626 1.957 2.444 3.38 4.6 3.42-2.07 1.623-4.678 2.348-7.29 2.04 2.18 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.72 13.995-14.646.962-.695 1.797-1.562 2.457-2.55z"/></svg></a>
+          {% endif %}
+          {% if theme.facebook_url != blank %}
+            <a class="social-link" target="_blank" title="Facebook" href="{{ theme.facebook_url }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.4c0 .7.6 1.3 1.3 1.3h11.5v-9.3H9.7v-3.6h3.1V8.4c0-3.1 1.9-4.8 4.7-4.8 1.3 0 2.5.1 2.8.1V7h-1.9c-1.5 0-1.8.7-1.8 1.8v2.3h3.6l-.5 3.6h-3.1V24h6.1c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"/></svg></a>
+          {% endif %}
+
+          {% if theme.pinterest_url != blank %}
+            <a class="social-link" target="_blank" title="Pinterest" href="{{ theme.pinterest_url }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.95-.2-2.405.042-3.44.217-.938 1.406-5.966 1.406-5.966s-.36-.72-.36-1.782c0-1.668.968-2.914 2.172-2.914 1.023 0 1.518.77 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.6 2.17 1.777 2.17 2.132 0 3.77-2.25 3.77-5.496 0-2.872-2.063-4.88-5.01-4.88-3.415 0-5.42 2.56-5.42 5.206 0 1.03.398 2.138.894 2.738.098.12.112.224.083.345l-.333 1.36c-.053.22-.174.266-.402.16-1.5-.698-2.436-2.89-2.436-4.65 0-3.784 2.75-7.26 7.93-7.26 4.162 0 7.397 2.966 7.397 6.93 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.36-.63-2.75-1.378l-.748 2.853c-.27 1.042-1.002 2.35-1.492 3.145C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" fill-rule="evenodd" clip-rule="evenodd"/></svg></a>
+          {% endif %}
+          {% if theme.tumblr_url != blank %}
+            <a class="social-link" target="_blank" title="Tumblr" href="{{ theme.tumblr_url }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16"><path d="M10 15.127c-.692.322-1.32.55-1.883.68-.562.128-1.172.193-1.823.193-.742 0-1.4-.093-1.97-.277-.57-.186-1.057-.448-1.46-.79-.402-.342-.46-.59-.614-.975C2.094 13.573 2 12.73 2 12V7H0V4c3 0 3-3 3-4h3v4.045L9 4v3H6v4c0 .928-.11 1.625.315 2.076.287.305.77.318 1.233.318.822 0 1.64-.264 2.45-.79v2.523z"/></svg></a>
+          {% endif %}
+        {% endif %}
+      </div>
+      <a class="close-overlay" href="#">
+        Close
+      </a>
+    </div>
+    <div class="page-content">
+      
+       <div class="left-panel{% if page.category == 'custom' or page.permalink == 'contact' or page.permalink == 'success' %} full-panel{% endif %}">
+        {% if theme.logo != blank %}
+          <a class="store-link" href="/" title="{{ store.name | escape }}"><img class="store-logo" alt="{{ store.name | escape }}" src="{{ theme.images.logo.url | constrain: 600, 240 }}"></a>
+        {% else %}
+          <a class="store-link" href="/" title="{{ store.name | escape }}">{{ store.name }}</a>
+        {% endif %}
+        {% if page.category == 'custom' or page.permalink == 'contact' %}
+          <h1 class="page-title custom-title">{{ page.name }}</h1>
+          <div class="custom-panel{% if page.category == 'custom' %} custom-page-content{% endif %}">
+            {{ page_content }}
+          </div>
+        {% else %}
+          <div class="panel-content">{{ page_content }}</div>
+        {% endif %}
+    </div>
+
+     
+      <h2 class="pm-h2"><a class="pm-link" href="#show-illustrations">Fine Art &amp; Illustrations</a>
+        &ensp; &#9679; &ensp;
+        
+        <a class="pm-link" href="#show-cartoons">Cartoons</a>
+        &ensp; &#9679; &ensp;<a class="pm-link" href="#show-sketches">Sketches</a>
+    </h2>
+
+    <div class="show-section" id="show-illustrations">
+        
+        <input type="checkbox" id="illustration-1"><label for="illustration-1" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/BillsButtChallenge-Mixed-Media-on-Bristol-Board.jpg" alt=""><p>Caption</p></label>
+    
+        <input type="checkbox" id="illustration-2"><label for="illustration-2" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Charlie-Western-Lowland-Gorilla-Ink-and-Gel-Pen-on-Toned-Paper.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-3"><label for="illustration-3" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Chipmunk-Watercolor.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-4"><label for="illustration-4" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Elephant-Ink-and-Watercolor.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-5"><label for="illustration-5" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Giraffe-Ink-and-Watercolor.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-6"><label for="illustration-6" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Kori-Bustard-Ink-and-Gel%20Pen-on-Toned-Paper.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-7"><label for="illustration-7" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Orangutan-Acrylic.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-8"><label for="illustration-8" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Orangutan-Ink-and-Gel-Pen-on-Toned-Paper.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-9"><label for="illustration-9" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Bob-Seger.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-10"><label for="illustration-10" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Dragon.jpg" alt="">
+        <p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-11"><label for="illustration-11" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Maced.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="illustration-12"><label for="illustration-12" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Science.jpg" alt=""><p>Caption</p></label>
+        
+        <div class="grid">
+        <label for="illustration-1" class="grid-item"><div class="illustration-one"></div></label>
+        <label for="illustration-2" class="grid-item"><div class="illustration-two"></div></label>
+        <label for="illustration-3" class="grid-item"><div class="illustration-three"></div></label>
+        <label for="illustration-4" class="grid-item"><div class="illustration-four"></div></label>
+        <label for="illustration-5" class="grid-item"><div class="illustration-five"></div></label>
+        <label for="illustration-6" class="grid-item"><div class="illustration-six"></div></label>
+        <label for="illustration-7" class="grid-item"><div class="illustration-seven"></div></label>
+        <label for="illustration-8" class="grid-item"><div class="illustration-eight"></div></label>
+        <label for="illustration-9" class="grid-item"><div class="illustration-nine"></div></label>
+        <label for="illustration-10" class="grid-item"><div class="illustration-ten"></div></label>
+        <label for="illustration-11" class="grid-item"><div class="illustration-eleven"></div></label>
+        <label for="illustration-12" class="grid-item"><div class="illustration-twelve"></div></label>
+        </div>
+    </div>
+    
+
+    
+    <div class="show-section" id="show-cartoons">
+        
+        <input type="checkbox" id="cartoon-1"><label for="cartoon-1" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Cartoons/Barr-Toad-Ink-and-Watercolor.jpg" alt=""><p>Caption</p></label>
+    
+        <input type="checkbox" id="cartoon-2"><label for="cartoon-2" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Cartoons/DJ-Lewis-Fancy-Mustard.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="cartoon-3"><label for="cartoon-3" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Cartoons/Learn-To-Live-With-It.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="cartoon-4"><label for="cartoon-4" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Cartoons/Trumptanic.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="cartoon-5"><label for="cartoon-5" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Cartoons/When-Donnie-Came-Marching-Home.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="cartoon-6"><label for="cartoon-6" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Cartoons/IMG_20200803_071641_177.jpg" alt=""><p>Caption</p></label>
+
+        <div class="grid">
+        
+        <label for="cartoon-1" class="grid-item"><div class="cartoon-one"></div></label>
+        <label for="cartoon-2" class="grid-item"><div class="cartoon-two"></div></label>
+        <label for="cartoon-3" class="grid-item"><div class="cartoon-three"></div></label>
+        <label for="cartoon-4" class="grid-item"><div class="cartoon-four"></div></label>
+        <label for="cartoon-5" class="grid-item"><div class="cartoon-five"></div></label>
+        <label for="cartoon-6" class="grid-item"><div class="cartoon-six"></div></label>
+        </div>
+    </div>
+    
+
+
+    <div class="show-section" id="show-sketches">
+        
+        <input type="checkbox" id="sketch-1"><label for="sketch-1" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Boxers-Ballpoint-Pen.jpg" alt=""><p>Caption</p></label>
+    
+        <input type="checkbox" id="sketch-2"><label for="sketch-2" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Boxers-Swinging-Ballpoint-Pen.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-3"><label for="sketch-3" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Bubba-Fett-Ballpoint-Pen.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-4"><label for="sketch-4" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Education-Orc-Ballpoint-Pen-and-Colored-Pencil.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-5"><label for="sketch-5" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Garbage-Man-Ballpoint-Pen-and-Colored-Ink.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-6"><label for="sketch-6" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Ground-Hornbill-Watercolor.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-7"><label for="sketch-7" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Jack-Davis-Study.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-8"><label for="sketch-8" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Lion-Watercolor.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-9"><label for="sketch-9" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Lost-Boy-Ballpoint-Pen-and-Sharpie.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-10"><label for="sketch-10" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Octopus-Ballpoint-Pen.jpg" alt="">
+        <p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-11"><label for="sketch-11" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Owl-Sketch-Page-Ballpoint-Pen.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-12"><label for="sketch-12" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Batman-Rescue-Dog-Colored-Ink-on-Paper.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-13"><label for="sketch-13" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Second-Baseman-Ballpoint-Pen.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-14"><label for="sketch-14" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Shortstop-Ballpoint-Pen.jpg" alt="">
+        <p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-15"><label for="sketch-15" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Swamp-Zombie-in-Jack-Davis-Style.jpg" alt=""><p>Caption</p></label>
+
+        <input type="checkbox" id="sketch-16"><label for="sketch-16" class="lightbox"><img src="https://codegreer.com/paintmonkey/ArtGallery/Sketches/Tom-Morello-Ink-and-Watercolor.jpg" alt=""><p>Caption</p></label>
+        
+        <div class="grid">
+        
+        <label for="sketch-1" class="grid-item"><div class="sketch-one"></div></label>
+        <label for="sketch-2" class="grid-item"><div class="sketch-two"></div></label>
+        <label for="sketch-3" class="grid-item"><div class="sketch-three"></div></label>
+        <label for="sketch-4" class="grid-item"><div class="sketch-four"></div></label>
+        <label for="sketch-5" class="grid-item"><div class="sketch-five"></div></label>
+        <label for="sketch-6" class="grid-item"><div class="sketch-six"></div></label>
+        <label for="sketch-7" class="grid-item"><div class="sketch-seven"></div></label>
+        <label for="sketch-8" class="grid-item"><div class="sketch-eight"></div></label>
+        <label for="sketch-9" class="grid-item"><div class="sketch-nine"></div></label>
+        <label for="sketch-10" class="grid-item"><div class="sketch-ten"></div></label>
+        <label for="sketch-11" class="grid-item"><div class="sketch-eleven"></div></label>
+        <label for="sketch-12" class="grid-item"><div class="sketch-twelve"></div></label>
+        <label for="sketch-13" class="grid-item"><div class="sketch-thirteen"></div></label>
+        <label for="sketch-14" class="grid-item"><div class="sketch-fourteen"></div></label>
+        <label for="sketch-15" class="grid-item"><div class="sketch-fifteen"></div></label>
+        <label for="sketch-16" class="grid-item"><div class="sketch-sixteen"></div></label>
+        </div>
+    </div>
+ 
+      
+    </div>
+    <div class="cart-overlay content-overlay"></div>
+    <div class="content-overlay navigation-overlay">
+      {% if theme.logo != blank %}
+        <a class="store-link" href="/" title="{{ store.name | escape }}"><img class="store-logo" alt="{{ store.name | escape }}" src="{{ theme.images.logo.url | constrain: 600, 240 }}"></a>
+      {% else %}
+        <a class="store-link" href="/" title="{{ store.name | escape }}">{{ store.name }}</a>
+      {% endif %}
+      <div class="menu-navigation-container">
+        <ul class="navigation-items">
+          {% for page in pages.all %}
+            <li>{{ page | link_to }}</li>
+          {% endfor %}
+          <li><a href="/products" title="Shop">Shop</a></li>
+          <li><a href="/contact" title="{{ pages.contact.name | escape }}">{{ pages.contact.name }}</a></li>
+        </ul>
+        <ul class="menu-social-links">
+          {% if theme.twitter_url != blank or theme.facebook_url != blank or theme.instagram_url != blank or theme.tumblr_url != blank or theme.pinterest_url != blank %}
+            {% if theme.instagram_url != blank %}
+              <li><a class="social-link" target="_blank" title="Instagram" href="{{ theme.instagram_url }}">Instagram</a></li>
+            {% endif %}
+            {% if theme.twitter_url != blank %}
+              <li><a class="social-link" target="_blank" title="Twitter" href="{{ theme.twitter_url }}">Twitter</a></li>
+            {% endif %}
+            {% if theme.facebook_url != blank %}
+              <li><a class="social-link" target="_blank" title="Facebook" href="{{ theme.facebook_url }}">Facebook</a></li>
+            {% endif %}
+
+            {% if theme.pinterest_url != blank %}
+              <li><a class="social-link" target="_blank" title="Pinterest" href="{{ theme.pinterest_url }}">Pinterest</a></li>
+            {% endif %}
+            {% if theme.tumblr_url != blank %}
+              <li><a class="social-link" target="_blank" title="Tumblr" href="{{ theme.tumblr_url }}">Tumblr</a></li>
+            {% endif %}
+          {% endif %}
+          {% if store.website != blank %}
+            <li><a class="social-link" href="{{ store.website }}">Back to Site</a></li>
+          {% endif %}
+        </ul>
+        <div class="menu-credit">{{ bigcartel_credit }}</div>
+      </div>
+    </div>
+    <div class="page-overlay"></div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script src="{{ 'api' | theme_js_url }}"></script>
+    <script>
+      var formatMoney = Format.money;
+      Format.money = function(number) {
+        {% case theme.money_format %}
+        {% when 'sign' %}
+          return formatMoney(number, true, true, false);
+        {% when 'code' %}
+          return formatMoney(number, true, false, true);
+        {% when 'sign_and_code' %}
+          return formatMoney(number, true, true, true);
+        {% endcase %}
+      };
+    </script>
+    <script src="{{ theme | theme_js_url }}"></script>
+    {% if page.full_url contains '/product/' %}
+      <script>
+        var product_option_display = '{{ theme.product_option_display }}';
+        var show_sold_out_product_options = '{{ theme.show_sold_out_product_options }}';
+        Product.find('{{ product.permalink }}', processProduct)
+      </script>
+    {% endif %}
+
+  </body>
+</html>    

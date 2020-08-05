@@ -1,0 +1,752 @@
+/* Cross Browser Compatability CSS */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 0.063em; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+
+
+/* All of the setup and non media query CSS */
+
+@font-face {
+  font-family: 'Chivo';
+  src: url(../fonts/Chivo-Light.ttf) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chivo-Italic';
+  src: url(../fonts/Chivo-Italic.ttf) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chivo-Bold';
+  src: url(../fonts/Chivo-Bold.ttf) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chivo-BoldItalic';
+  src: url(../fonts/Chivo-BoldItalic.ttf) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url(../fonts/Montserrat-Bold.ttf) format('truetype');
+    font-display: swap;
+}
+
+.pm-bold {
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+
+.pm-home-menu ul,
+.pm-welcome,
+.pm-flex-container,
+.pm-flex-boxes,
+.pm-gallery-container {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+}
+
+.pm-hide-home-desktop {
+    display: none;
+}
+
+.pm-container {
+    background-color: #ffffff;
+}
+
+
+.pm-header {
+    background-color: #cb2128;
+    padding: 1em 0 1em 15%;
+}
+
+.pm-logo {
+    width: 70%;
+}
+
+.pm-welcome {
+    align-items: center;
+}
+
+.pm-h1, .pm-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    flex: 5;
+    padding: .5em 0;
+}
+
+.pm-h2 {
+    text-align: left;
+    font-size: 1.5vw;
+    margin-left: 15vw;
+}
+
+.pm-home-menu {
+    margin-top: 1em;
+}
+
+.pm-home-menu ul {
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em 10% 0;
+    list-style-type: none;
+}
+
+.pm-home-menu ul li {
+    font-family: 'Chivo', sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    padding: 0 .25em 1em;
+}
+
+.pm-link:link {color: #000; text-decoration: none; } 
+.pm-link:visited {color: #000; }  
+.pm-link:hover {color: #971C97; }  
+.pm-link:active {color: #971C97; } 
+
+.pm-flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pm-flex-boxes {
+    flex: 0 0 20%;
+    margin: 1em;
+    background: #000;
+    justify-content: center;
+    align-items: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pm-home-1 {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Charlie-Western-Lowland-Gorilla-Ink-and-Gel-Pen-on-Toned-Paper.jpg');
+}
+
+.pm-home-2 {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/John-Lewis-Ink-and-Gel-Pen-on-Toned-Paper.jpg');
+}
+
+.pm-home-3 {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Cartoons/Chase-Ink-on-Paper.jpg');
+}
+
+.pm-home-4 {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/BillsButtChallenge-Mixed-Media-on-Bristol-Board.jpg');
+}
+
+.pm-flex-boxes:after{
+    content: '';
+    display: table;
+    padding-bottom: 100%;
+}
+
+footer {
+    padding: 1em 0 2em;
+}
+
+.pm-copyright {
+    font-family: 'Chivo', sans-serif;
+    font-size: 1.2vw !important;
+    text-align: center;
+    padding: 1em 0 0;
+}
+
+
+/* Art Gallery Grid */
+
+.pm-gallery-container {
+    
+}
+
+.pm-galleries {
+   
+}
+
+/* Expando Bits */
+
+.show-section {
+  height: 0;
+  overflow: hidden;
+}
+
+.show-section:target {
+  min-height: 20em;
+}
+
+.illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
+    width: 15.5vw;
+    height: 10em;
+    margin-bottom: 1em;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.illustration-one {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/BillsButtChallenge-Mixed-Media-on-Bristol-Board.jpg');
+}
+
+.illustration-two {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Charlie-Western-Lowland-Gorilla-Ink-and-Gel-Pen-on-Toned-Paper.jpg');
+}
+
+.illustration-three {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Chipmunk-Watercolor.jpg');
+}
+
+.illustration-four {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Elephant-Ink-and-Watercolor.jpg');
+}
+
+.illustration-five {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Giraffe-Ink-and-Watercolor.jpg');
+}
+
+.illustration-six {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Kori-Bustard-Ink-and-Gel%20Pen-on-Toned-Paper.jpg');
+}
+
+.illustration-seven {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/John-Lewis-Ink-and-Gel-Pen-on-Toned-Paper.jpg');
+}
+
+.illustration-eight {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Orangutan-Acrylic.jpg');
+}
+
+.illustration-nine {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Orangutan-Ink-and-Gel-Pen-on-Toned-Paper.jpg');
+}
+
+.illustration-ten {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Bob-Seger.jpg');
+}
+
+.illustration-eleven {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Dragon.jpg');
+}
+
+.illustration-twelve {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Maced.jpg');
+}
+
+.illustration-thirteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Science.jpg');
+}
+
+
+.cartoon-one {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Cartoons/Barr-Toad-Ink-and-Watercolor.jpg');
+}
+
+.cartoon-two {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Cartoons/DJ-Lewis-Fancy-Mustard.jpg');
+}
+
+.cartoon-three {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Cartoons/Learn-To-Live-With-It.jpg');
+}
+
+.cartoon-four {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Cartoons/Trumptanic.jpg');
+}
+
+.cartoon-five {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Cartoons/When-Donnie-Came-Marching-Home.jpg');
+}
+
+.cartoon-six {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Cartoons/IMG_20200803_071641_177.jpg');
+}
+
+
+.sketch-one {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Boxers-Ballpoint-Pen.jpg');
+}
+
+.sketch-two {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Boxers-Swinging-Ballpoint-Pen.jpg');
+}
+
+.sketch-three {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Bubba-Fett-Ballpoint-Pen.jpg');
+}
+
+.sketch-four {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Education-Orc-Ballpoint-Pen-and-Colored-Pencil.jpg');
+}
+
+.sketch-five {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Garbage-Man-Ballpoint-Pen-and-Colored-Ink.jpg');
+}
+
+.sketch-six {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Ground-Hornbill-Watercolor.jpg');
+}
+
+.sketch-seven {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Jack-Davis-Study.jpg');
+}
+
+.sketch-eight {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Lion-Watercolor.jpg');
+}
+
+.sketch-nine {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Lost-Boy-Ballpoint-Pen-and-Sharpie.jpg');
+}
+
+.sketch-ten {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Octopus-Ballpoint-Pen.jpg');
+}
+
+.sketch-eleven {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Owl-Sketch-Page-Ballpoint-Pen.jpg');
+}
+
+.sketch-twelve {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Batman-Rescue-Dog-Colored-Ink-on-Paper.jpg');
+}
+
+.sketch-thirteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Second-Baseman-Ballpoint-Pen.jpg');
+}
+
+.sketch-fourteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Shortstop-Ballpoint-Pen.jpg');
+}
+
+.sketch-fifteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Swamp-Zombie-in-Jack-Davis-Style.jpg');
+}
+
+.sketch-sixteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/Sketches/Tom-Morello-Ink-and-Watercolor.jpg');
+}
+
+label[for] { cursor: pointer; }
+input[type='checkbox'] { display: none; }
+
+.lightbox { width: 100%; position: fixed; top: 0; left: 0; }
+
+.lightbox {
+    z-index: 1;
+    min-height: 100%;
+    overflow: auto;
+    transform: scale(0);
+    transition: transform .9s ease-out;
+}
+
+.lightbox img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 96%;
+    max-height: 80%;
+    transform: translate(-50%, -55%);
+}
+
+.lightbox p {
+    width: 80%;
+    margin: 0 10%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2vw;
+    position: fixed;
+    bottom: 2em;
+}
+
+input[type='checkbox']:checked + .lightbox { transform: scale(1); }
+input[type='checkbox']:checked ~ .grid { opacity: 0.05; }
+
+.grid { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 100%;
+    width: 90%;
+    margin: 0 5%;
+    overflow: auto;
+    z-index: 0;
+    text-align: center;
+}
+
+.grid .grid-item { 
+    display: block; 
+    width: 25%;  
+}
+
+
+/* From Big Cartel's CSS */
+
+body {
+    background-color: #fff;
+    font-size: 1.5em;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4vw;
+    line-height: 1.625; /* 26px */
+    margin-bottom: 1em;
+}
+
+.custom-title {
+    font-family: 'Chivo', sans-serif;
+    font-size: 3.5vw;
+}
+
+.pm-custom-title {
+    float: none;
+    font-family: "Chivo", sans-serif;
+    font-size: 3.5vw;
+    font-weight: normal;
+    margin: 0 0 .5em;
+    padding: 0;
+    width: 400px;
+}
+
+.product-card .product-link {
+    font-size: 2vw;
+}
+
+.menu-bar .social-links .social-link svg {
+    fill: #cb2128 !important;
+    height: 25px !important;
+    width: 25px !important;
+}
+
+.menu-bar .cart-icon {
+    background: #cb2128; !important;
+}
+
+.open-navigation, .close-overlay {
+  font-size: 2vw;
+}
+
+.navigation-items {
+    font-family: 'Chivo', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+}
+.navigation-items li {
+    font-family: 'Chivo', sans-serif;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.menu-social-links {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5vw !important;
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+
+.art-gallery-css .left-panel {
+    min-height: 0;
+    padding-bottom: 0px;
+}
+      
+      
+
+/**** Mobile Media Queries ****/
+
+/*** Up to 1040px ***/
+@media only screen and (max-width: 65em) {
+    
+    footer {
+        margin-bottom: 3em;
+    } 
+}
+
+
+/************ Change Format ************/
+
+/*** Up to 800px ***/
+@media only screen and (max-width: 50em) {
+    
+    
+    .pm-hide-home-desktop {
+        display: flex;
+    }
+    
+    .pm-h1 {
+        font-size: 4.5vw;
+    }
+ 
+    .pm-home-menu {
+        display: none;
+    }  
+    
+    .pm-flex-boxes {
+        flex: 0 0 45%;
+        margin: .5em;
+    }
+    
+    .pm-gallery-container {
+        display: block;
+    }
+    
+    .pm-tabs {
+        padding-bottom: 2em;
+    }
+
+    .pm-h2 {
+        font-size: 3vw;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .grid {
+        margin: 0 0 0 6%;
+    }
+    
+    .illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
+        width: 42vw;
+        height: 10em;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .grid .grid-item { 
+        width: 50%;  
+    }
+    
+    .lightbox img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        max-width: 90%;
+        max-height: 70%;
+        transform: translate(-50%, -65%);
+    }
+    
+    .lightbox p {
+        font-size: 2vw;
+        bottom: 5em;
+    }
+    
+    footer {
+        padding: 0;
+        margin-bottom: 4em;
+    }
+
+    .pm-copyright {
+        font-size: 2vw !important;
+        padding: .5em;
+    }
+    
+    .word-wrap {
+        word-wrap: break-word;
+    }
+    
+    p {
+        font-size: 2.2vw;
+    }
+    
+    .custom-title {
+        font-size: 5vw;
+    }
+    
+    .pm-custom-title {
+        text-align: center;
+        float: none;
+        font-size: 5vw;
+        width: 100%;
+    }
+    
+    .open-navigation, 
+    .close-overlay,
+    .menu-bar .cart-title {
+      font-size: 3vw;
+    }
+
+    .menu-social-links {
+        font-size: 2.5vw !important;
+        line-height: 50px;
+    }
+    
+    .art-gallery-css .left-panel {
+        min-height: 0;
+        padding-bottom: 0px;
+    }
+}
+
+/*** Up to 560px ***/
+@media only screen and (max-width: 35em) {
+    
+    .pm-header {
+        padding: 2em 1%;
+    }
+
+    .pm-logo {
+        width: 100%;
+    }
+    
+    .pm-flex-boxes {
+        flex: 0 0 100%;
+        margin: 2% 0;
+    }
+    
+    .pm-h1 {
+        font-size: 8vw;
+    }
+    
+    .pm-gallery-container {
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .pm-h2 {
+        font-size: 8vw;
+    }
+
+    .pm-tabs {
+       flex: 1;
+    }
+    
+    .pm-galleries {
+        flex: 0 0 100%;
+    }
+   
+    .show-section:target {
+        min-height: 0;
+        height: auto;
+    }
+    
+    .grid {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .grid .grid-item { 
+        width: 90%;
+        margin: 0 5%;
+        /* overflow: hidden; */
+    }
+    
+    .illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
+        width: 90vw;
+        height: 10em;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .lightbox img {
+        max-height: 60%;
+        transform: translate(-50%, -65%);
+    }
+     
+    .lightbox p {
+        font-size: 4vw;
+        bottom: 6em;
+    }
+    
+    .pm-home-menu {
+        display: none;
+    }
+    
+    footer {
+        padding: 0;
+    }
+
+    .pm-copyright {
+        font-size: 4.5vw !important;
+        padding: 1em;
+    }
+    
+    p {
+        font-size: 5vw;
+    }
+    
+    .custom-title, .pm-custom-title {
+        font-size: 10vw;
+    }
+    
+    .open-navigation, 
+    .close-overlay,
+    .menu-bar .cart-title {
+      font-size: 7vw;
+    }
+    
+    .menu-social-links {
+        font-size: 6vw !important;
+        line-height: 50px;
+    }   
+}
+    
+/*** Up to 336px ***/
+@media only screen and (max-width: 21em) {
+    
+    .lightbox p {
+        font-size: 5vw;
+        bottom: 5em;
+    }
+}
