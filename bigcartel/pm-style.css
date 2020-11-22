@@ -185,11 +185,11 @@ input, select { vertical-align: middle; }
 }
 
 .pm-home-1 {
-    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Charlie-Western-Lowland-Gorilla-Ink-and-Gel-Pen-on-Toned-Paper.jpg');
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/John-Lewis-Ink-and-Gel-Pen-on-Toned-Paper.jpg');
 }
 
 .pm-home-2 {
-    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/John-Lewis-Ink-and-Gel-Pen-on-Toned-Paper.jpg');
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Zombie-Pottery-Art.jpg');
 }
 
 .pm-home-3 {
@@ -250,7 +250,7 @@ footer {
   min-height: 20em;
 }
 
-.illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
+.illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .illustration-fourteen, .illustration-fifteen, .illustration-sixteen, .illustration-seventeen, .illustration-eighteen, .illustration-nineteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
     width: 15.5vw;
     height: 10em;
     margin-bottom: 1em;
@@ -313,6 +313,30 @@ footer {
 
 .illustration-thirteen {
     background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/WellRed-Science.jpg');
+}
+
+.illustration-fourteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Black-Lagoon-Art.jpg');
+}
+
+.illustration-fifteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Frankesteins-Art.jpg');
+}
+
+.illustration-sixteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Headless-Horseman-Art.jpg');
+}
+
+.illustration-seventeen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Jason-Art.jpg');
+}
+
+.illustration-eighteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Leatherface-Art.jpg');
+}
+
+.illustration-nineteen {
+    background-image: url('https://codegreer.com/paintmonkey/ArtGallery/FineArtandIllustration/Zombie-Pottery-Art.jpg');
 }
 
 
@@ -595,7 +619,7 @@ p {
         margin: 0 0 0 6%;
     }
     
-    .illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
+    .illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .illustration-fourteen, .illustration-fifteen, .illustration-sixteen, .illustration-seventeen, .illustration-eighteen, .illustration-nineteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
         width: 42vw;
         height: 10em;
         background-size:cover;
@@ -726,7 +750,7 @@ p {
         /* overflow: hidden; */
     }
     
-    .illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
+    .illustration-one, .illustration-two, .illustration-three, .illustration-four, .illustration-five, .illustration-six, .illustration-seven, .illustration-eight, .illustration-nine, .illustration-ten, .illustration-eleven, .illustration-twelve, .illustration-thirteen, .illustration-fourteen, .illustration-fifteen, .illustration-sixteen, .illustration-seventeen, .illustration-eighteen, .illustration-nineteen, .cartoon-one, .cartoon-two, .cartoon-three, .cartoon-four, .cartoon-five, .cartoon-six, .sketch-one, .sketch-two, .sketch-three, .sketch-four, .sketch-five, .sketch-six, .sketch-seven, .sketch-eight, .sketch-nine, .sketch-ten, .sketch-eleven, .sketch-twelve, .sketch-thirteen, .sketch-fourteen, .sketch-fifteen, .sketch-sixteen {
         width: 90vw;
         height: 15em;
         background-size:cover;
